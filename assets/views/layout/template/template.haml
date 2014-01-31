@@ -1,0 +1,21 @@
+%div.container
+	%h1 Template List
+
+	%table.table.table-striped.table-hover
+		%tr
+			%td Template's Name 
+			%td Controls
+		-foreach($lists as $list)
+			%tr
+				%td = $list['name']
+				%td 
+					%a.btn.btn-success{:href => $list['delete']} Delete Template
+
+	%a.btn.btn-success.add-template{:href => "#"} Add New Template
+
+
+	%form.new-tamplate-form{:action => "templates/add", :method =>"POST"}
+		%p Your New Template
+		%div
+			%textarea.form-control.html-template{:name=>"html-template"}
+		%input.btn.btn-success{:type=>"submit", :value=>"Submit"}

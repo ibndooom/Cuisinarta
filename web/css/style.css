@@ -1,0 +1,23 @@
+select.user-dropdown{
+	width:100%;
+}
+select.user-dropdown + div{
+	padding-top: 24px;
+}
+select.category{
+	width:100%;
+}
+
+.user-actions{
+	margin-top: 20px;
+}
+
+.new-tamplate-form{
+	display: none;
+	margin-top: 50px;
+}
+
+.html-template{
+	min-height: 150px;
+	margin-bottom: 20px;
+}

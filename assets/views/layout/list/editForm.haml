@@ -1,0 +1,31 @@
+%div.container
+
+	%div.col-sm-6
+		%form{:role=>"form"}
+			%div.form-group
+				%label{:for=>"inputEmail1"} Email address
+				%input#inputEmail1.form-control{:type=>"email", :placeholder=>"Enter email"}
+
+			%div.form-group
+				%label{:for=>"inputName1"} Name address
+				%input#inputEmail1.form-control{:type=>"text", :placeholder=>"Name"}
+
+			%select.chosen.category{:multiple=>"true"}
+				%option.selected Choose Category...
+				%option jQuery
+				%option MooTools
+				%option Prototype
+				%option Dojo Toolkit
+
+			
+	%div.col-sm-6
+		%select.chosen.user-dropdown
+			%option.selected Choose User...
+			- foreach ($allUsers as $user)
+				%option{:value => $user['value'], :selected => $user['selected']}(data-email = $user['email']) =$user['name']
+
+		%div.user-actions
+		%a.btn.btn-success{:href => ""} Save
+		%a.btn.btn-info{:href => ""} Edit
+		%a.btn.btn-danger{:href => ""} Delete 
+

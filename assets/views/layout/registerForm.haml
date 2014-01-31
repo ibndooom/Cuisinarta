@@ -1,0 +1,6 @@
+%h1 Registration
+%form.register{:method=>"POST", :action=>"/user/add"}
+  %span.error =$error
+  %input.name{:placeholder=>"Login", :name=>"login"}
+  %input.password{:type=>"password", :placeholder=>"Password", :name=>"password"}
+  %button Registration

@@ -1,0 +1,18 @@
+.container 
+	%h1 Sign in
+	%form.form-horizontal.login{:method=>"POST", :action=>"/user/login", :role=>"form"}
+	
+		%div.form-group
+			%label.col-sm-2.control-label{:for=>"inputEmail"} Email
+			%div.col-sm-5
+				%input.form-control#inputEmail.name{:placeholder=>"Login", :name=>"login"}(value=$login)
+	
+		%div.form-group
+			%label.col-sm-2.control-label{:for=>"inputEmail"} Password
+			%div.col-sm-5
+				%input.form-control#inputEmail.password{:type=>"password", :placeholder=>"Password", :name=>"password"}(value=$password)
+	
+		%div.form-group
+			%div.col-sm-5.col-sm-offset-2
+				%button Login
+				%a.register{:href=>"/user/add"} No account? Register

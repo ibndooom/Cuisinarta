@@ -1,0 +1,5 @@
+%h1 Sign in
+%form.userEdit{:method=>"POST", :action=>"/user/login"}
+  %input.name{:placeholder=>"Login", :name=>"login", :disabled=true}(value=$login)
+  %input.password{:type=>"password", :placeholder=>"Password", :name=>"password"}(value=$password)
+  %button Save

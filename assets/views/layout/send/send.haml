@@ -1,0 +1,23 @@
+.container 
+	%h1 Mailing
+	%form.form-horizontal.login{:method=>"POST", :action=>"/sender/send", :role=>"form"}
+
+		%div.col-sm-6
+			%select#templateId.chosen.category
+				%option.selected Choose Template...
+				%option jQuery
+				%option MooTools
+				%option Prototype
+				%option Dojo Toolkit
+
+		%div.col-sm-6
+			%select#listId.chosen.category
+				%option.selected Choose Mail List...
+				%option jQuery
+				%option MooTools
+				%option Prototype
+				%option Dojo Toolkit
+
+		%div.col-sm-6.col-sm-offset-3
+			%input.form-control{:name=>"sendTitle", :type=>"text"}
+			%input{:type=>"submit"}

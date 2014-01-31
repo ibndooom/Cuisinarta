@@ -1,0 +1,5 @@
+/.idea
+/vendor
+/assets/rendered
+/assets/config
+composer.lock

@@ -1,0 +1,17 @@
+%div.container
+	%h1 Mail Lists
+
+	%table.table.table-striped.table-hover
+		%tr
+			%td Name 
+			%td Subscribes Count
+			%td Controls
+		-foreach($lists as $list)
+			%tr
+				%td = $list['name']
+				%td = $list['count']
+				%td 
+					%a.btn.btn-success{:href => $list['edit']} Edit
+					%a.btn.btn-success{:href => $list['delete']} Delete
+
+	%a.btn.btn-success{:href => "/lists/add"} Add
